@@ -1,0 +1,489 @@
+/* ============================================
+   AVYRON — Products Section
+   Tokens: sage #7C8B77 · taupe #C4BBAE · forest #4F6B4A · cream #E8E6E0
+   ============================================ */
+
+.prod-section {
+    position: relative;
+    background: #f5f3ee;
+    padding: 72px 24px 88px;
+}
+
+/* .prod-section__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+} */
+.prod-section__inner {
+    max-width: 1050px;
+    /* 1180px → 1050px */
+    margin: 0 auto;
+}
+
+.prod-eyebrow {
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* .prod-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #2f3a2c;
+    text-align: center;
+    margin: 0 0 44px;
+} */
+
+.prod-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 700;
+    /* 500 → 700 */
+    color: #8FA5A4;
+    /* naya color */
+    text-align: center;
+    margin: 0 0 44px;
+}
+
+.prod-message {
+    text-align: center;
+    font-family: "Jost", sans-serif;
+    color: #6b6357;
+    padding: 40px 0;
+}
+
+/* .prod-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+} */
+/* .prod-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;    
+} */
+
+/* .prod-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+.prod-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: #ffffff;
+    border-radius: 12px;
+    /* 14px → 12px */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prod-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(47, 58, 44, 0.1);
+}
+
+.prod-card__img-wrap {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #c4bbae;
+}
+
+.prod-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.prod-card:hover .prod-card__img {
+    transform: scale(1.04);
+}
+
+.prod-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #7c8b77;
+    color: #f5f3ee;
+    font-family: "Jost", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    pointer-events: none;
+}
+
+/* .prod-card__body {
+    padding: 12px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+} */
+/* .prod-card__body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+} */
+
+.prod-card__body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    /* naya */
+    text-align: center;
+    /* naya */
+}
+
+/* .prod-card__title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2f3a2c;
+    margin: 0;
+} */
+.prod-card__title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+    /* 16px → 15px */
+    font-weight: 500;
+    color: #2f3a2c;
+    margin: 0;
+}
+
+/* .prod-card__desc {
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #746c5f;
+    margin: 0;
+    height: 34px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+} */
+.prod-card__desc {
+    font-family: "Jost", sans-serif;
+    font-size: 11px;
+    /* 12px → 11px */
+    line-height: 1.4;
+    color: #746c5f;
+    margin: 0;
+    height: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* .prod-card__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 2px;
+} */
+/* .prod-card__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 2px;
+} */
+.prod-card__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-start → center */
+    gap: 6px;
+    margin-top: 2px;
+}
+
+/* .prod-card__category {
+    font-family: "Jost", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    background: rgba(124, 139, 119, 0.14);
+    border-radius: 6px;
+    padding: 4px 8px;
+    white-space: nowrap;
+    pointer-events: none;
+} */
+.prod-card__category {
+    font-family: "Jost", sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    background: rgba(124, 139, 119, 0.14);
+    border-radius: 5px;
+    padding: 3px 7px;
+    white-space: nowrap;
+}
+
+/* .prod-card__price {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4f6b4a;
+    margin-top: 2px;
+} */
+.prod-card__price {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    /* 14px → 13px */
+    font-weight: 500;
+    color: #4f6b4a;
+}
+
+/* ===========================
+   Actions — Add to Cart / Buy Now
+=========================== */
+
+/* .prod-card__actions {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+.prod-card__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    font-family: "Jost", sans-serif;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    padding: 9px 8px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
+
+    transition: background 0.25s ease, color 0.25s ease,
+        border-color 0.25s ease, transform 0.15s ease;
+} */
+.prod-card__actions {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+.prod-card__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: "Jost", sans-serif;
+    font-size: 9px;
+    /* 10.5px → 9px */
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 8px 6px;
+    border-radius: 7px;
+    flex: 1;
+}
+
+.prod-card__btn:active {
+    transform: scale(0.96);
+}
+
+/* .prod-cart-icon {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+} */
+.prod-cart-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.prod-card__btn--outline {
+    background: transparent;
+    color: #4f6b4a;
+    border: 1.4px solid #4f6b4a;
+}
+
+.prod-card__btn--outline:hover:not(:disabled) {
+    background: #4f6b4a;
+    color: #f5f3ee;
+}
+
+/* "Added ✓" state — chota bounce + green pop */
+.prod-card__btn--added {
+    background: #4f6b4a !important;
+    color: #f5f3ee !important;
+    border-color: #4f6b4a !important;
+    animation: prod-added-pop 0.35s ease;
+}
+
+@keyframes prod-added-pop {
+    0% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.prod-card__btn--solid {
+    background: #4f6b4a;
+    color: #f5f3ee;
+}
+
+.prod-card__btn--solid:hover:not(:disabled) {
+    background: #3d5539;
+}
+
+.prod-card__btn:disabled {
+    background: #e4e1d8 !important;
+    color: #a8a396 !important;
+    border-color: #e4e1d8 !important;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.prod-card--skeleton {
+    aspect-ratio: 4 / 5;
+    background: linear-gradient(90deg, #ece9e2 25%, #f5f3ee 37%, #ece9e2 63%);
+    background-size: 400% 100%;
+    animation: prod-shimmer 1.4s ease infinite;
+}
+
+@keyframes prod-shimmer {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.prod-viewall-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.prod-viewall {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f5f3ee;
+    /* background: #4f6b4a; */
+    background: #8FA5A4;
+    padding: 14px 40px;
+    text-decoration: none;
+    transition: background 0.25s ease;
+}
+
+.prod-viewall:hover {
+    /* background: #3d5539; */
+    background: #A7B9B8;
+}
+
+/* ===========================
+   Toast (Added to cart feedback)
+=========================== */
+
+.prod-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    z-index: 500;
+
+    /* background: #2f3a2c;    // #8FA5A4 */
+    background: #8FA5A4; 
+    color: #f5f3ee;
+
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+
+    padding: 12px 24px;
+    border-radius: 30px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+
+    animation: prod-toast-in 0.3s ease;
+}
+
+@keyframes prod-toast-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 960px) {
+    .prod-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .prod-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .prod-card__actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .prod-section {
+        padding: 44px 14px 56px;
+    }
+
+    .prod-heading {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .prod-card__title {
+        font-size: 15px;
+    }
+
+    .prod-card__desc {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,167 @@
+/* ============================================
+   AVYRON — Contact Section
+   Tokens: sage #7C8B77 · taupe #C4BBAE · forest #4F6B4A · cream #E8E6E0
+   ============================================ */
+
+.contact-section {
+    background: #f5f3ee; 
+    /* #8FA5A4 */
+    padding: 80px 24px;
+}
+
+.contact-section__inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 56px;
+}
+
+.contact-eyebrow {
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    /* color: #4f6b4a; */
+
+    margin-bottom: 10px;
+}
+
+.contact-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #2f3a2c;
+    margin: 0 0 16px;
+}
+
+.contact-copy {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #5c5648;
+    margin: 0 0 28px;
+    max-width: 380px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    color: #2f3a2c;
+    text-decoration: none;
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.contact-link:hover {
+    color: #4f6b4a;
+    border-color: #4f6b4a;
+}
+
+.contact-link__icon {
+    font-size: 16px;
+    color: #7c8b77;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form__label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+}
+
+.contact-form__input {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    color: #2f3a2c;
+    background: #ffffff;
+    border: 1px solid #c4bbae;
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-transform: none;
+    letter-spacing: normal;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+.contact-form__input:focus {
+    border-color: #4f6b4a;
+}
+
+.contact-form__textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form__submit {
+    align-self: flex-start;
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f5f3ee;
+    background: #8FA5A4;   
+    /* background: #4f6b4a;    */
+    border: none;
+    border-radius: 8px;
+    padding: 14px 34px;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.contact-form__submit:hover {
+    background: #A7B9B8;  
+    /* background: #3d5539;   */
+}
+
+.contact-form__success {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    color: #4f6b4a;
+    margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+    .contact-section__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-copy {
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 52px 16px;
+    }
+
+    .contact-heading {
+        font-size: 28px;
+    }
+}

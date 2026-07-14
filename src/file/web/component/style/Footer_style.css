@@ -1,0 +1,94 @@
+/* ============================================
+   AVYRON — Footer
+   Tokens: sage #7C8B77 · taupe #C4BBAE · forest #4F6B4A · cream #E8E6E0
+   ============================================ */
+
+.avy-footer {
+    background: #8FA5A4;
+    /* background: #2F2F2F; */
+    padding: 64px 24px 0;
+}
+
+.avy-footer__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(245, 243, 238, 0.12);
+}
+
+.avy-footer__col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.avy-footer__logo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    color: #f5f3ee;
+}
+
+.avy-footer__tagline {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245, 243, 238, 0.65);
+    margin: 4px 0 0;
+    max-width: 220px;
+}
+
+.avy-footer__heading {
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #a9b8a4;
+    margin-bottom: 4px;
+}
+
+.avy-footer__link {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    color: rgba(245, 243, 238, 0.8);
+    text-decoration: none;
+    width: fit-content;
+    transition: color 0.2s ease;
+}
+
+.avy-footer__link:hover {
+    color: #ffffff;
+}
+
+.avy-footer__bottom {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    color: rgba(245, 243, 238, 0.5);
+    text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+    .avy-footer__inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .avy-footer {
+        padding: 48px 18px 0;
+    }
+
+    .avy-footer__inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}

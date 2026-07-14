@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#root {
+    height: 100vh;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    height: 70px;
+    flex-shrink: 0;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 260px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

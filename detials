@@ -1,0 +1,90 @@
+************** product
+search bar name 
+delete model
+
+************** order
+
+Hero Banner
+Categories
+6 product or nicha ekbutton
+About Brand
+Contact
+Footer
+
+************** web
+-- navbar 
+right side mai add to card center mai home collection contect left side mai logo 
+navbar apni jaga pe fix hoga 
+jab ad to card mai click ho ek model khule card form mai row voice wo product show ho rahai ho usme ek button hoga product agar hatana chai to 
+collection mai dropdown hoga jaha categeries show ho rahi ho gi link tag mai 
+or mobile mai ya menu bar ke tarha ho jai ga 
+
+-- hero
+yaha img show hogi 3 3 sce ke hisab se change ho gi 
+
+-- collection 3 card show hoga category se ai ge modile destop ipad yaha 3no jaga ek row mai show ho ge thora small size acha laga link tag mai go ge
+
+paher product show hogi 6 cart mai img title category Prices link tag mai buy now ka button ad to card ka be 6 cart bat wo show hoga all rerfume link mai hoga wo 
+
+Navbar
+
+Fixed position (scroll karne pe upar hi rahega)
+Left: Logo (AVYRON)
+Center: Home, Collection, Contact
+Right: "Add to Cart" icon
+Add to Cart click → ek modal khulega — cart mein jo products hain wo row-list (card jaisi horizontal rows) mein dikhenge, har row pe ek "Remove" button hoga
+Collection → dropdown (hover/click pe) — jismein categories links ke roop mein dikhengi (Men/Women/Unisex, jo bhi DB se aaye)
+Mobile → hamburger menu (☰) mein convert ho jayega
+
+1️⃣ Hero Banner
+
+AVYRON branding + tagline + CTA button
+3 images ka auto-slider — har 3 second mein khud badlengi (carousel)
+
+2️⃣ Categories
+
+3 columns, ek row mein — Men, Women, Unisex saath saath
+Mobile pe bhi 3 hi ek row mein rahenge (chhote size mein, wrap nahi honge)
+
+3️⃣ 6 Products
+
+Homepage pe 6 featured/latest products, neeche "View All" button (poori list page pe le jayega)
+
+4️⃣ About Brand
+
+4 images + text — text main khud likh dunga (brand tone ke hisaab se, aap review kar lena)
+
+5️⃣ gallery 4 picture — 
+
+6️⃣ Contact
+
+Email link, WhatsApp link + ek contact form — sab acha/clean design mein
+
+7️⃣ Mobile — kam scroll
+
+Sections compact rakhne honge, unnecessary spacing avoid karni hogi taake mobile pe user zyada scroll na kare
+
+
+Theek hai, image sizes bhejo — main wahi rakh ke design karunga. Jab sab details mil jayen, poora homepage ek saath banana shuru karunga.
+
+
+logo size 
+Width: 940 px
+Height: 1437 px
+location /accets/img/logo.jpeg
+
+Hero Banner (3 images)
+FileSizeRatio
+hero.png (man in kurta)1672×9411.78 (16:9)
+hero2.png (man spraying Sherlock)1536×10241.50
+hero3.png (5 bottles lineup)1672×9411.78 (16:9)
+location /accets/img/hero3.png
+
+
+Gallery / About Brand (4 images)
+FileSizeRatio
+gallery.png (Moon Knight + Aris)1448×10861.33
+gallery3.png (woman holding Rose Dawson)1536×10241.50
+gllery2.png (5 bottles wide shot)1536×10241.50
+gallery4.png (El Dorado single)1672×9411.78
+location /accets/img/gallery.png

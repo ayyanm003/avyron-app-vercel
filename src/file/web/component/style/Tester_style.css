@@ -1,0 +1,254 @@
+/* ============================================
+   AVYRON — Tester Section
+   Tokens: sage #7C8B77 · taupe #C4BBAE · forest #4F6B4A · cream #E8E6E0
+   ============================================ */
+
+.tester-section {
+    background: #e8e6e0;
+    padding: 56px 24px;
+}
+
+.tester-section__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.tester-section__header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.tester-eyebrow {
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    margin-bottom: 8px;
+}
+
+.tester-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    font-weight: 500;
+    color: #2f3a2c;
+    margin: 0;
+}
+
+.tester-message {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    color: #6b6357;
+    padding: 20px;
+}
+
+.tester-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tester-track {
+    height: 30vh;
+    min-height: 220px;
+    max-height: 300px;
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    flex: 1;
+}
+
+.tester-track::-webkit-scrollbar {
+    display: none;
+}
+
+.tester-card {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 22%;
+    min-width: 150px;
+    max-width: 190px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tester-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(47, 58, 44, 0.1);
+}
+
+.tester-card__img-wrap {
+    flex: 1;
+    min-height: 0;
+    background: #c4bbae;
+    overflow: hidden;
+}
+
+.tester-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tester-card__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 8px 10px;
+}
+
+.tester-card__row:last-child {
+    padding-top: 0;
+}
+
+.tester-card__title {
+    flex: 1;
+    min-width: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2f3a2c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tester-card__category {
+    font-family: "Jost", sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    background: rgba(124, 139, 119, 0.14);
+    border-radius: 6px;
+    padding: 3px 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+.tester-card__btn {
+    flex: 1;
+    font-family: "Jost", sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 6px 4px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.tester-card__btn--solid {
+    background: #4f6b4a;
+    color: #f5f3ee;
+}
+
+.tester-card__btn--solid:hover {
+    background: #3d5539;
+}
+
+.tester-card__btn--outline {
+    background: transparent;
+    color: #4f6b4a;
+    border: 1px solid #4f6b4a;
+}
+
+.tester-card__btn--outline:hover {
+    background: #4f6b4a;
+    color: #f5f3ee;
+}
+
+.tester-card--skeleton {
+    width: 22%;
+    min-width: 150px;
+    max-width: 190px;
+    flex: 0 0 auto;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #ddd9d0 25%, #ece9e2 37%, #ddd9d0 63%);
+    background-size: 400% 100%;
+    animation: tester-shimmer 1.4s ease infinite;
+}
+
+@keyframes tester-shimmer {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.tester-arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #4f6b4a;
+    background: #f5f3ee;
+    color: #4f6b4a;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.tester-arrow:hover {
+    background: #4f6b4a;
+    color: #f5f3ee;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+
+    .tester-card,
+    .tester-card--skeleton {
+        width: 38%;
+        min-width: 130px;
+    }
+
+    .tester-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .tester-track {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 420px) {
+    .tester-section {
+        padding: 40px 16px;
+    }
+
+    .tester-heading {
+        font-size: 26px;
+    }
+
+    .tester-card,
+    .tester-card--skeleton {
+        width: 46%;
+        min-width: 120px;
+    }
+}

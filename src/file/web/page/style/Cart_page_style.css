@@ -1,0 +1,311 @@
+/* ============================================
+   AVYRON — Cart Page
+   Tokens: sage #7C8B77 · taupe #C4BBAE · forest #4F6B4A · cream #E8E6E0 · ink #2F3A2C
+   ============================================ */
+
+.cartpg {
+    min-height: 70vh;
+    background: #f5f3ee;
+    padding: 120px 24px 80px;
+}
+
+.cartpg__inner {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.cartpg__heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    font-weight: 500;
+    color: #2f3a2c;
+    margin: 0 0 32px;
+}
+
+.cartpg__empty {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: "Jost", sans-serif;
+    color: #2f3a2c;
+}
+
+.cartpg__empty-cta {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    border-bottom: 1px solid #4f6b4a;
+    text-decoration: none;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* ---------- Cart list ---------- */
+
+.cartpg__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cartpg__row {
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto;
+    align-items: center;
+    gap: 16px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+
+.cartpg__img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cartpg__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.cartpg__name {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    color: #2f3a2c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cartpg__category {
+    font-family: "Jost", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+}
+
+.cartpg__price {
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2f3a2c;
+    white-space: nowrap;
+}
+
+.cartpg__remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Jost", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(47, 58, 44, 0.5);
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.cartpg__remove:hover {
+    color: #2f3a2c;
+}
+
+/* ---------- Summary ---------- */
+
+.cartpg__summary {
+    margin-top: 28px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px 22px;
+}
+
+.cartpg__summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    color: #5c5648;
+    padding: 5px 0;
+}
+
+.cartpg__summary-row--total {
+    font-size: 17px;
+    font-weight: 500;
+    color: #2f3a2c;
+    padding-top: 12px;
+    margin-top: 8px;
+    border-top: 1px solid rgba(47, 58, 44, 0.1);
+}
+
+.cartpg__order-btn {
+    width: 100%;
+    margin-top: 18px;
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #f5f3ee;
+    background: #4f6b4a;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.cartpg__order-btn:hover {
+    background: #3d5539;
+}
+
+.cartpg__order-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ---------- Order modal ---------- */
+
+.cartpg__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(47, 58, 44, 0.45);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 80px;
+    overflow-y: auto;
+}
+
+.cartpg__order-modal {
+    width: 460px;
+    max-width: 92vw;
+    max-height: 84vh;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 24px 60px rgba(47, 58, 44, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.cartpg__order-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-bottom: 1px solid rgba(47, 58, 44, 0.08);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    color: #2f3a2c;
+}
+
+.cartpg__icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2f3a2c;
+    display: flex;
+}
+
+.cartpg__order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 22px 26px;
+}
+
+.cartpg__order-label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "Jost", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+}
+
+.cartpg__order-input {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    color: #2f3a2c;
+    background: #ffffff;
+    border: 1px solid #c4bbae;
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-transform: none;
+    letter-spacing: normal;
+    outline: none;
+}
+
+.cartpg__order-input:focus {
+    border-color: #4f6b4a;
+}
+
+.cartpg__order-textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.cartpg__order-error {
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    color: #b3453f;
+    margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+    .cartpg {
+        padding: 100px 16px 60px;
+    }
+
+    .cartpg__heading {
+        font-size: 26px;
+    }
+
+    .cartpg__row {
+        grid-template-columns: 56px 1fr auto;
+        grid-template-areas:
+            "img info info"
+            "img price remove";
+        row-gap: 6px;
+        column-gap: 10px;
+        padding: 12px 14px;
+    }
+
+    .cartpg__img {
+        width: 56px;
+        height: 56px;
+        grid-area: img;
+    }
+
+    .cartpg__info {
+        grid-area: info;
+    }
+
+    .cartpg__price {
+        grid-area: price;
+        font-size: 13px;
+    }
+
+    .cartpg__remove {
+        grid-area: remove;
+        font-size: 10px;
+    }
+
+    .cartpg__name {
+        font-size: 15px;
+    }
+}

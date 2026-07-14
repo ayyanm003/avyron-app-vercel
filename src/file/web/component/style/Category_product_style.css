@@ -1,0 +1,372 @@
+/* ============================================
+   AVYRON — Category Products Page
+   Tokens: sage #7C8B77 · taupe #C4BBAE · forest #4F6B4A · cream #E8E6E0
+   ============================================ */
+
+.cat-section {
+    position: relative;
+    background: #f5f3ee;
+    padding: 100px 24px 88px;
+    min-height: 70vh;
+}
+
+.cat-section__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* .cat-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #2f3a2c;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0 0 44px;
+} */
+.cat-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 700;
+    /* 500 → 700 */
+    color: #8FA5A4;
+    /* naya color */
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0 0 44px;
+}
+
+.cat-message {
+    text-align: center;
+    font-family: "Jost", sans-serif;
+    color: #6b6357;
+    padding: 40px 0;
+}
+
+/* ===========================
+   Grid — mobile pe 2 columns
+   taake ek screen mein ~6 cards dikhein
+=========================== */
+
+/* .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+} */
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+}
+
+.cat-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cat-card:hover {
+    transform: translateY(-4px);
+    /* box-shadow: #8FA5A4; */
+    box-shadow: 0 12px 24px rgba(47, 58, 44, 0.1);
+
+}
+
+/* 8FA5A4 */
+.cat-card__img-wrap {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #c4bbae;
+}
+
+.cat-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.cat-card:hover .cat-card__img {
+    transform: scale(1.04);
+}
+
+/* .cat-card__body {
+    padding: 12px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+} */
+.cat-card__body {
+    padding: 12px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    /* naya */
+    text-align: center;
+    /* naya */
+}
+
+.cat-card__title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2f3a2c;
+    margin: 0;
+}
+
+.cat-card__desc {
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #746c5f;
+    margin: 0;
+    height: 34px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* .cat-card__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 2px;
+} */
+.cat-card__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-start → center */
+    gap: 8px;
+    margin-top: 2px;
+}
+
+.cat-card__category {
+    font-family: "Jost", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    background: rgba(124, 139, 119, 0.14);
+    border-radius: 6px;
+    padding: 4px 8px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.cat-card__price {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4f6b4a;
+    margin-top: 2px;
+}
+
+/* ===========================
+   Actions
+=========================== */
+
+.cat-card__actions {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+.cat-card__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    font-family: "Jost", sans-serif;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    padding: 9px 8px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
+
+    transition: background 0.25s ease, color 0.25s ease,
+        border-color 0.25s ease, transform 0.15s ease;
+}
+
+.cat-card__btn:active {
+    transform: scale(0.96);
+}
+
+.cat-cart-icon {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+}
+
+.cat-card__btn--outline {
+    background: transparent;
+    color: #4f6b4a;
+    border: 1.4px solid #4f6b4a;
+}
+
+/* .cat-card__btn--outline:hover:not(:disabled) {
+    background: #4f6b4a;
+    color: #f5f3ee;
+} */
+.cat-card__btn--outline:hover:not(:disabled) {
+    background: #8FA5A4;
+    color: #f5f3ee;
+}
+
+/* 8FA5A4 */
+.cat-card__btn--added {
+    background: #4f6b4a !important;
+    color: #f5f3ee !important;
+    border-color: #4f6b4a !important;
+    animation: cat-added-pop 0.35s ease;
+}
+
+@keyframes cat-added-pop {
+    0% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* .cat-card__btn--solid {
+    background: #4f6b4a;
+    color: #f5f3ee;
+} */
+ .cat-card__btn--solid {
+    background: #8FA5A4;
+}
+
+/* .cat-card__btn--solid:hover:not(:disabled) {
+    background: #3d5539;
+} */
+ .cat-card__btn--solid:hover:not(:disabled) {
+    background: #A7B9B8;
+}
+
+/* 8FA5A4 */
+.cat-card__btn:disabled {
+    background: #e4e1d8 !important;
+    color: #a8a396 !important;
+    border-color: #e4e1d8 !important;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.cat-card--skeleton {
+    aspect-ratio: 4 / 5;
+    background: linear-gradient(90deg, #ece9e2 25%, #f5f3ee 37%, #ece9e2 63%);
+    background-size: 400% 100%;
+    animation: cat-shimmer 1.4s ease infinite;
+}
+
+@keyframes cat-shimmer {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* ===========================
+   Toast
+=========================== */
+
+.cat-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    z-index: 500;
+
+    /* background: #2f3a2c; */
+     background: #8FA5A4;
+    color: #f5f3ee;
+
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+
+    padding: 12px 24px;
+    border-radius: 30px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+
+    animation: cat-toast-in 0.3s ease;
+}
+
+@keyframes cat-toast-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ===========================
+   Responsive
+   Mobile: 2 columns — 3 rows (~6 cards) visible-ish,
+   baaki neeche scroll se
+=========================== */
+
+@media (max-width: 960px) {
+    .cat-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .cat-card__actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .cat-section {
+        padding: 80px 14px 56px;
+    }
+
+    .cat-heading {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .cat-card__title {
+        font-size: 15px;
+    }
+
+    .cat-card__desc {
+        font-size: 11px;
+    }
+}

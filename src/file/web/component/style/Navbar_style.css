@@ -1,0 +1,573 @@
+/* ============================================
+   AVYRON — Navbar
+   Tokens: sage #7C8B77 · taupe #C4BBAE · forest #4F6B4A · cream #E8E6E0 · ink #2F3A2C
+   ============================================ */
+
+.avy-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #8FA5A4;
+    box-shadow: 0 2px 8px rgba(47, 58, 44, 0.1);
+}
+
+.avy-nav .avy-logo,
+.avy-nav .avy-link,
+.avy-nav .avy-cart-btn,
+.avy-nav .avy-burger span {
+    color: #2f3a2c;
+}
+
+.avy-nav .avy-burger span {
+    background: #2f3a2c;
+}
+
+.avy-nav .avy-link::after {
+    background: #4f6b4a;
+}
+
+.avy-nav__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+.avy-logo {
+    font-family: "Cormorant Garamond", "Georgia", serif;
+    font-size: 22px;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.avy-logo__img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.avy-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.avy-link {
+    position: relative;
+    font-family: "Jost", "Inter", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+}
+
+.avy-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    transition: width 0.25s ease;
+}
+
+.avy-link:hover::after {
+    width: 100%;
+}
+
+.avy-chevron {
+    transition: transform 0.2s ease;
+}
+
+.avy-chevron--open {
+    transform: rotate(180deg);
+}
+
+.avy-collection {
+    position: relative;
+}
+
+.avy-dropdown {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border: 1px solid rgba(47, 58, 44, 0.08);
+    box-shadow: 0 12px 32px rgba(47, 58, 44, 0.1);
+    min-width: 160px;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.avy-dropdown__item {
+    padding: 10px 20px;
+    font-family: "Jost", "Inter", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: #2f3a2c;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.avy-dropdown__item:hover {
+    background: #e8e6e0;
+    color: #4f6b4a;
+}
+
+.avy-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avy-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2f3a2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avy-cart-btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.avy-cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -9px;
+    background: #4f6b4a;
+    color: #f5f3ee;
+    font-family: "Jost", sans-serif;
+    font-size: 10px;
+    line-height: 1;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2px;
+}
+
+.avy-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.avy-burger span {
+    width: 22px;
+    height: 1.5px;
+    background: #2f3a2c;
+}
+
+/* ---------- Overlay ---------- */
+
+.avy-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(47, 58, 44, 0.45);
+    z-index: 150;
+}
+
+.avy-overlay--top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+/* ---------- Mobile menu ---------- */
+
+.avy-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: #e8e6e0;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 28px;
+    animation: avySlideIn 0.3s ease forwards;
+}
+
+@keyframes avySlideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.avy-mobile__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.avy-mobile__link {
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #2f3a2c;
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(47, 58, 44, 0.08);
+}
+
+.avy-mobile__group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(47, 58, 44, 0.08);
+}
+
+.avy-mobile__label {
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    margin-bottom: 10px;
+}
+
+.avy-mobile__sublink {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    color: #2f3a2c;
+    text-decoration: none;
+    padding: 8px 0 8px 8px;
+}
+
+/* ---------- Cart modal ---------- */
+
+.avy-cart-modal {
+    width: 420px;
+    max-width: 92vw;
+    max-height: 76vh;
+    background: #ffffff;
+    box-shadow: 0 24px 60px rgba(47, 58, 44, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.avy-cart-modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-bottom: 1px solid rgba(47, 58, 44, 0.08);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: #2f3a2c;
+    flex-shrink: 0;
+}
+
+.avy-cart-empty {
+    padding: 48px 24px;
+    text-align: center;
+    font-family: "Jost", sans-serif;
+    color: #2f3a2c;
+}
+
+.avy-cart-empty__cta {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    border-bottom: 1px solid #4f6b4a;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+}
+
+.avy-cart-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 6px 0;
+    flex: 1;
+    min-height: 0;
+    scrollbar-width: thin;
+}
+
+.avy-cart-row {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 22px;
+    border-bottom: 1px solid rgba(47, 58, 44, 0.06);
+}
+
+.avy-cart-row__img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.avy-cart-row__info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    font-family: "Jost", sans-serif;
+}
+
+.avy-cart-row__name {
+    font-size: 13px;
+    color: #2f3a2c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.avy-cart-row__type {
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+    margin-top: 3px;
+}
+
+.avy-cart-row__side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.avy-cart-row__price {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #2f3a2c;
+    white-space: nowrap;
+}
+
+.avy-cart-row__remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Jost", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(47, 58, 44, 0.5);
+    text-decoration: underline;
+    white-space: nowrap;
+    padding: 0;
+}
+
+.avy-cart-row__remove:hover {
+    color: #2f3a2c;
+}
+
+/* ---------- Cart summary + Order button ---------- */
+
+.avy-cart-summary {
+    padding: 16px 22px 20px;
+    border-top: 1px solid rgba(47, 58, 44, 0.08);
+    flex-shrink: 0;
+}
+
+.avy-cart-summary__row {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    color: #5c5648;
+    padding: 4px 0;
+}
+
+.avy-cart-summary__row--total {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2f3a2c;
+    padding-top: 10px;
+    margin-top: 6px;
+    border-top: 1px solid rgba(47, 58, 44, 0.1);
+}
+
+.avy-order-btn {
+    width: 100%;
+    margin-top: 16px;
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #f5f3ee;
+    background: #4f6b4a;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.avy-order-btn:hover {
+    background: #3d5539;
+}
+
+.avy-order-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ---------- Order form modal ---------- */
+
+.avy-order-modal {
+    width: 460px;
+    max-width: 92vw;
+    max-height: 84vh;
+    background: #ffffff;
+    box-shadow: 0 24px 60px rgba(47, 58, 44, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border-radius: 12px;
+}
+
+/* ---------- Mobile: full-width bottom sheet ---------- */
+
+@media (max-width: 560px) {
+    .avy-overlay--top {
+        align-items: flex-end;
+        padding-top: 0;
+    }
+
+    .avy-cart-modal,
+    .avy-order-modal {
+        width: 100%;
+        max-width: 100%;
+        max-height: 88vh;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .avy-cart-row {
+        grid-template-columns: 48px 1fr auto;
+        padding: 10px 16px;
+    }
+
+    .avy-cart-row__img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .avy-cart-summary {
+        padding: 14px 16px 18px;
+    }
+
+    .avy-order-form {
+        padding: 16px 16px 22px;
+    }
+}
+
+.avy-order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 22px 26px;
+}
+
+.avy-order-form__label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "Jost", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4f6b4a;
+}
+
+.avy-order-form__input {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    color: #2f3a2c;
+    background: #ffffff;
+    border: 1px solid #c4bbae;
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-transform: none;
+    letter-spacing: normal;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+.avy-order-form__input:focus {
+    border-color: #4f6b4a;
+}
+
+.avy-order-form__textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.avy-order-form__error {
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    color: #b3453f;
+    margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+    .avy-links {
+        display: none;
+    }
+
+    .avy-burger {
+        display: flex;
+    }
+
+    .avy-nav__inner {
+        padding: 0 20px;
+        height: 64px;
+    }
+
+    .avy-logo__img {
+        height: 34px;
+    }
+}

@@ -1,0 +1,147 @@
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar {
+    height: 70px;
+    background: #7C8B77;
+    /* background: #4F6B4A; */
+    border-bottom: 1px solid #4F6B4A;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    padding: 0 25px;
+    z-index: 1000;
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.navbar-logo h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+/* ===========================
+   Profile
+=========================== */
+
+.navbar-profile {
+    position: absolute;
+    right: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.profile-icon {
+    font-size: 34px;
+    color: #fff;
+}
+
+.arrow {
+    font-size: 12px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
+}
+
+/* ===========================
+   Dropdown
+=========================== */
+
+.profile-dropdown {
+    position: absolute;
+    top: 58px;
+    right: 0;
+
+    width: 180px;
+
+    background: #fff;
+    border: 1px solid #E8E6E0;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+
+    z-index: 999;
+}
+
+.profile-dropdown button {
+    width: 100%;
+    padding: 13px 16px;
+
+    background: transparent;
+    border: none;
+
+    text-align: left;
+    font-size: 15px;
+    color: #000;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.profile-dropdown button:hover {
+    background: #E8E6E0;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px) {
+
+    .navbar {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .navbar-logo h2 {
+        font-size: 20px;
+    }
+
+    .navbar-profile {
+        right: 15px;
+    }
+
+    .profile-icon {
+        font-size: 30px;
+    }
+
+    .profile-dropdown {
+        width: 160px;
+        top: 52px;
+    }
+
+}
+
+@media (max-width:480px) {
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .navbar-logo h2 {
+        font-size: 18px;
+    }
+
+    .profile-icon {
+        font-size: 28px;
+    }
+
+}
