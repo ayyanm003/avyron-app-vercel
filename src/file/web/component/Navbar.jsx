@@ -296,7 +296,7 @@ export default function Navbar() {
                         {CATEGORIES.map((cat) => (
                             <a
                                 key={cat._id}
-                                href={`/collection/${cat.category_name.toLowerCase()}`}
+                                href={`/category_product/${cat.category_name.toLowerCase()}`}
                                 className="avy-mobile__sublink"
                                 onClick={() => setMobileOpen(false)}
                             >
