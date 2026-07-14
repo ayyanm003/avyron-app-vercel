@@ -6,7 +6,9 @@ import { jwtDecode } from "jwt-decode";
 
 const Signin = () => {
 
-    const server = "http://localhost:2000/"
+    // const server = "http://localhost:2000/"
+    const server = "https://avyron-backend.vercel.app/";
+
 
     const navigate = useNavigate()
 
