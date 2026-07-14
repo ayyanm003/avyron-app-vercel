@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style/Product_style.css";
 import axios from "axios";
 
@@ -51,7 +51,7 @@ export default function Product() {
     const [cartFull, setCartFull] = useState(false);
     const [toast, setToast] = useState("");
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     // const server = "http://localhost:2000/";
     const server = "https://avyron-backend.vercel.app/";
 
@@ -95,12 +95,12 @@ export default function Product() {
     };
 
     // *************** Buy Now ***************
-    const handleBuyNow = (e, p) => {
-        e.preventDefault();
-        e.stopPropagation();
+    // const handleBuyNow = (e, p) => {
+    //     e.preventDefault();
+    //     e.stopPropagation();
 
-        addToCart(p, "Product", showToast);
-    };
+    //     addToCart(p, "Product", showToast);
+    // };
 
     return (
         <section className="prod-section">

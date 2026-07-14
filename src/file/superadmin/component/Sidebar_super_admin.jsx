@@ -1,10 +1,10 @@
 import "./style/Sidebar_super_admin_style.css";
 import {
-    FaTachometerAlt,
-    FaUsers,
+    // FaTachometerAlt,
+    // FaUsers,
     FaBoxOpen,
     FaClipboardList,
-    FaCog,
+    // FaCog,
     FaShoppingCart,
     FaVial,
 } from "react-icons/fa";
