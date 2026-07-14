@@ -54,7 +54,9 @@ const Category_product = () => {
     const [cartFull, setCartFull] = useState(false);
     const [toast, setToast] = useState("");
 
-    const server = "http://localhost:2000/";
+    // const server = "http://localhost:2000/";
+    const server = "https://avyron-backend.vercel.app/";
+
 
     useEffect(() => {
         const fetchProducts = async () => {

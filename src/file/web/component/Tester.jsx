@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./style/Tester_style.css";
 
-const server = "http://localhost:2000/";
+// const server = "http://localhost:2000/";
+    const server = "https://avyron-backend.vercel.app/";
+
 
 export default function Tester() {
     const [testers, setTesters] = useState([]);

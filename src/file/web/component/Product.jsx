@@ -52,7 +52,9 @@ export default function Product() {
     const [toast, setToast] = useState("");
 
     const navigate = useNavigate();
-    const server = "http://localhost:2000/";
+    // const server = "http://localhost:2000/";
+    const server = "https://avyron-backend.vercel.app/";
+
 
     useEffect(() => {
         const fetchProducts = async () => {

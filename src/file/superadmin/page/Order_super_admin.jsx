@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./style/Order_super_admin_style.css";
 
-const server = "http://localhost:2000/";
+// const server = "http://localhost:2000/";
+    const server = "https://avyron-backend.vercel.app/";
+
+
 
 const STATUS_OPTIONS = ["Pending", "Confirmed", "Delivered"];
 

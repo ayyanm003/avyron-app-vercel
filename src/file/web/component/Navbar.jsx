@@ -3,7 +3,9 @@ import axios from "axios";
 import "./style/Navbar_style.css";
 import { useNavigate } from "react-router-dom";
 
-const server = "http://localhost:2000/";
+// const server = "http://localhost:2000/";
+    const server = "https://avyron-backend.vercel.app/";
+
 const DELIVERY_CHARGE = 200;
 
 // ---------------- ICONS ----------------

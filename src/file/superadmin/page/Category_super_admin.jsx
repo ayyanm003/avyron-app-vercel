@@ -7,7 +7,12 @@ import axios from "axios";
 
 const Category_super_admin = () => {
 
-    const server = "http://localhost:2000/"; // http://localhost:2000/category_create
+    // const server = "http://localhost:2000/"; // http://localhost:2000/category_create
+
+    // const server = "https://avyron-backend.vercel.app/";
+    const server = "https://avyron-backend.vercel.app/";
+
+
 
     const [categoryName, setCategoryName] = useState("");
     const [categoryImage, setCategoryImage] = useState(null);

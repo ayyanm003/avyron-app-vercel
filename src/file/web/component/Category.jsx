@@ -126,7 +126,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./style/Category_style.css";
 
-const server = "http://localhost:2000/";
+// const server = "http://localhost:2000/";
+    const server = "https://avyron-backend.vercel.app/";
+
 
 export default function Category() {
 

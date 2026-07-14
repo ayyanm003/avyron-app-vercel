@@ -4,7 +4,9 @@ import axios from "axios";
 
 const Product_super_admin = () => {
 
-    const server = "http://localhost:2000/";
+    // const server = "http://localhost:2000/";
+    const server = "https://avyron-backend.vercel.app/";
+
     // http://localhost:2000/product_create
     // http://localhost:2000/product_read
     // http://localhost:2000/category_read
